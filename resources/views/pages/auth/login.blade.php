@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <title>Inscription - Coinks</title>
+    <title>Connexion - Coinks</title>
 </head>
 <body class='container-fluid'>
     <main class='row justify-content-center'>
         <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-right" style="height:100vh">
             
-            <form action="/inscription" method="post">
+            <form action="/connexion" method="post">
                 @csrf
 
                 <div class="form-group row ">
@@ -34,23 +34,6 @@
                     </div>
 
                     @error('pseudo')
-                    <div class="ml-auto col-lg-8 mt-2">
-                        <div class="alert alert-danger w-100 text-center">{{ $message }}</div>
-                    </div>
-                    @enderror
-                </div>
-
-                <div class="form-group row ">
-
-                    <div class="col-lg-4 text-right p-0 d-flex flex-column justify-content-center">
-                        <label for="email" class="mr-3">Email</label>
-                    </div>
-
-                    <div class="col-lg-8">
-                        <input type="email" name="email" id="email" aria-describedby="helpEmail" value='{{old('email')}}' class="form-control @error('email') is-invalid @enderror">
-                    </div>
-
-                    @error('email')
                     <div class="ml-auto col-lg-8 mt-2">
                         <div class="alert alert-danger w-100 text-center">{{ $message }}</div>
                     </div>
@@ -75,7 +58,7 @@
 
                 </div>
 
-                <button type="submit" class="btn btn-primary">S'inscrire</button>
+                <button type="submit" class="btn btn-primary">Connexion</button>
             </form>
 
         </div>
