@@ -18,7 +18,7 @@
 </head>
 <body class='container-fluid'>
     <main class='row justify-content-center'>
-        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center" style="height:100vh">
+        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center" style="height:86vh">
             
             <form action="/inscription" method="post">
                 @csrf

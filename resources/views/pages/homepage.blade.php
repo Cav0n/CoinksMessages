@@ -18,13 +18,13 @@
 </head>
 <body class='container-fluid'>
     <main class='row'>
-        <div class="col-12 d-flex flex-column justify-content-center text-center" style="height:100vh">
+        <div class="col-12 d-flex flex-column justify-content-center text-center" style="height:86vh">
             
             <h1>Bienvenue</h1>
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <a type="button" class="btn btn-outline-primary" href="/inscription">Inscription</a>
-                    <a type="button" class="btn btn-outline-primary" href="/connexion">Connexion</a>
+                    <a class="btn btn-outline-primary rounded-0" href="/inscription">Inscription</a>
+                    <a class="btn btn-outline-primary rounded-0" href="/connexion">Connexion</a>
                 </div>
             </div>
 

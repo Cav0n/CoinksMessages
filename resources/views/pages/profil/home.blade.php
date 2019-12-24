@@ -18,12 +18,12 @@
 </head>
 <body class='container-fluid'>
     <main class='row justify-content-center'>
-        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-center" style="height:100vh">
+        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-center mt-5">
 
             <h1>Salut {{Auth::user()->pseudo}}</h1>
             <a name="logout-btn" id="logout-btn" class="btn btn-outline-danger mx-auto" href="/logout" role="button" style="width:max-content">Déconnexion</a>
 
-            <form action="/messages/nouveau" method='POST'>
+            <form action="/messages/nouveau" method='POST' class='mt-5 pt-5 border-top'>
                 @csrf
 
                 <div class="form-group">
