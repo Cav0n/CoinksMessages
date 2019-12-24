@@ -18,14 +18,14 @@
 </head>
 <body class='container-fluid'>
     <main class='row justify-content-center'>
-        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-right" style="height:100vh">
+        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center" style="height:100vh">
             
             <form action="/inscription" method="post">
                 @csrf
 
                 <div class="form-group row ">
 
-                    <div class="col-lg-4 text-right p-0 d-flex flex-column justify-content-center">
+                    <div class="col-lg-4 text-lg-right p-lg-0 d-flex flex-column justify-content-center">
                         <label for="pseudo" class="mr-3">Pseudo</label>
                     </div>
 
@@ -42,7 +42,7 @@
 
                 <div class="form-group row ">
 
-                    <div class="col-lg-4 text-right p-0 d-flex flex-column justify-content-center">
+                    <div class="col-lg-4 text-lg-right p-lg-0 d-flex flex-column justify-content-center">
                         <label for="email" class="mr-3">Email</label>
                     </div>
 
@@ -59,7 +59,7 @@
 
                 <div class="form-group row ">
 
-                    <div class="col-lg-4 text-right p-0 d-flex flex-column justify-content-center">
+                    <div class="col-lg-4 text-lg-right p-lg-0 d-flex flex-column justify-content-center">
                         <label for="password" class="mr-3">Mot de passe</label>
                     </div>
 

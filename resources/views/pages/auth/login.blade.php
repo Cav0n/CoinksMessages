@@ -18,14 +18,20 @@
 </head>
 <body class='container-fluid'>
     <main class='row justify-content-center'>
-        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-right" style="height:100vh">
+        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center" style="height:100vh">
+
+            @if(session('successMessage'))
+            <div class="ml-auto col-lg-8 mt-2">
+                <div class="alert alert-success w-100 text-center">{{session('successMessage')}}</div>
+            </div>
+            @endif
 
             <form action="/connexion" method="post">
                 @csrf
 
                 <div class="form-group row ">
 
-                    <div class="col-lg-4 text-right p-0 d-flex flex-column justify-content-center">
+                    <div class="col-lg-4 text-lg-right p-lg-0 d-flex flex-column justify-content-center">
                         <label for="pseudo" class="mr-3">Pseudo</label>
                     </div>
 
@@ -42,7 +48,7 @@
 
                 <div class="form-group row ">
 
-                    <div class="col-lg-4 text-right p-0 d-flex flex-column justify-content-center">
+                    <div class="col-lg-4 text-lg-right p-lg-0 d-flex flex-column justify-content-center">
                         <label for="password" class="mr-3">Mot de passe</label>
                     </div>
 

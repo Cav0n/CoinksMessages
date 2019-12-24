@@ -22,7 +22,7 @@
             
             <h1>Bienvenue</h1>
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-lg-6">
                     <a type="button" class="btn btn-outline-primary" href="/inscription">Inscription</a>
                     <a type="button" class="btn btn-outline-primary" href="/connexion">Connexion</a>
                 </div>

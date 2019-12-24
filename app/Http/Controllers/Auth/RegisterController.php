@@ -63,6 +63,6 @@ class RegisterController extends Controller
         $user->password = Hash::make($request['password']);
         $user->save();
 
-        return $user;
+        return redirect('connexion')->with('successMessage', 'Compte créé avec succés !');
     }
 }
