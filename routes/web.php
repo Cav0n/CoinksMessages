@@ -15,3 +15,4 @@ Route::get('/', 'PageController@homepage');
 Route::get('/inscription', 'PageController@registration');
 Route::post('/inscription', 'Auth\RegisterController@create');
 Route::get('/connexion', 'PageController@login');
+Route::post('/connexion', 'Auth\LoginController@login');
