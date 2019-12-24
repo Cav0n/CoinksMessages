@@ -72,6 +72,7 @@
 
                 <div class='ml-auto col-lg-8 d-flex justify-content-between p-0 pl-2'>
                     <a class='text-muted mr-auto' href="/">Retour</a>
+                    <a class='text-muted ml-auto my-auto mr-2' href="/mot-de-passe-oublie">Mot de passe oublié ?</a>
                     <button type="submit" class="btn btn-primary">Connexion</button>
                 </div>
                 
