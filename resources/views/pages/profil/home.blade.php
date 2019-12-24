@@ -41,7 +41,7 @@
                         <p class="card-text mb-0">{{$message->text}}</p>
                     </div>
                     <div class="card-footer">
-                        <p class='mb-0 text-right'>{{$message->user->pseudo}} - Le {{$message->created_at->formatLocalized('%e %B %G à %H:%M')}}</p>
+                        <p class='mb-0 text-right'>{{$message->user->pseudo}} - Le {{ $message->created_at->formatLocalized('%e %B %G') }} à {{$message->created_at->formatLocalized('%H:%M')}}</p>
                     </div>
                 </div>  
             @endforeach
