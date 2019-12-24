@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Auth;
 
 class LoginController extends Controller
@@ -28,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/profil';
 
     /**
      * Create a new controller instance.
@@ -38,21 +39,5 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-    }
-
-    public function login(Request $request)
-    {
-        $request->validate([
-            'pseudo' => ['required', 'string', 'min:3', 'max:255', 'exists:users'],
-            'password' => ['required', 'string', 'min:8'],
-        ]);
-
-        $credentials = $request->only('pseudo', 'password');
-
-        if (Auth::attempt($credentials)) {
-            dd('ok');
-        } else {
-            dd('no');
-        }
     }
 }

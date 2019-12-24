@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +55,12 @@
                         <div class="alert alert-danger w-100 text-center">{{ $message }}</div>
                     </div>
                     @enderror
+
+                    @isset($incorrectCredentials)
+                    <div class="ml-auto col-lg-8 mt-2">
+                        <div class="alert alert-danger w-100 text-center">Mot de passe incorrect</div>
+                    </div>
+                    @endisset
 
                 </div>
 
