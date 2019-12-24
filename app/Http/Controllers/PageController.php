@@ -19,6 +19,7 @@ class PageController extends Controller
     }
 
     public function profil(){
-        return view('pages.profil.home');
+        $messages = \App\Message::all()->sortByDesc('created_at');
+        return view('pages.profil.home')->withMessages($messages);
     }
 }

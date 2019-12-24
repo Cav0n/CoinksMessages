@@ -17,9 +17,9 @@ class CreateMessagesTable extends Migration
             $table->bigIncrements('id');
 
             $table->text('text');
-            $table->string('user_id');
+            $table->string('user_pseudo');
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_pseudo')->references('pseudo')->on('users');
 
             $table->timestamps();
         });

@@ -19,3 +19,5 @@ Route::post('/connexion', 'Auth\LoginController@login');
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/profil', 'PageController@profil');
+
+Route::post('/messages/nouveau', 'MessageController@store');

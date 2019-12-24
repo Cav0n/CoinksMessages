@@ -14,15 +14,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <title>Connexion - Coinks</title>
+    <title>Mon profil - Coinks</title>
 </head>
 <body class='container-fluid'>
     <main class='row justify-content-center'>
         <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-center" style="height:100vh">
 
             <h1>Salut {{Auth::user()->pseudo}}</h1>
-            <a name="logout-btn" id="logout-btn" class="btn btn-outline-danger mx-auto" href="/logout" role="button" style="width:max-content">
-                Déconnexion</a>
+            <a name="logout-btn" id="logout-btn" class="btn btn-outline-danger mx-auto" href="/logout" role="button" style="width:max-content">Déconnexion</a>
+
+            <form action="/messages/nouveau" method='POST'>
+                @csrf
+
+                <div class="form-group">
+                    <label for="text">Votre message</label>
+                    <textarea type="text" class="form-control" name="text" id="text" aria-describedby="helpText"></textarea>
+                    <small id="helpText" class="form-text text-muted">Restez courtois et n'envoyez pas d'insanités.</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+
+            @foreach ($messages as $message)
+                <div class="card my-3">
+                    <div class="card-body">
+                        <p class="card-text mb-0">{{$message->text}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class='mb-0 text-right'>{{$message->user->pseudo}} - Le {{$message->created_at->formatLocalized('%e %B %G à %H:%M')}}</p>
+                    </div>
+                </div>  
+            @endforeach
 
         </div>
     </main>

@@ -43,10 +43,11 @@ class MessageController extends Controller
 
         $message = new Message();
         $message->text = $request['text'];
-        $message->user_id = Auth::user()->id;
+        $message->user_pseudo = Auth::user()->pseudo;
         $message->save();
 
-        return response()->json(['result', 'Message sent !'], 200);
+        return back();
+        // return response()->json(['result', 'Message sent !'], 200);
     }
 
     /**
