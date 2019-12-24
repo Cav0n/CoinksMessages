@@ -17,3 +17,5 @@ Route::post('/inscription', 'Auth\RegisterController@create');
 Route::get('/connexion', 'PageController@login');
 Route::post('/connexion', 'Auth\LoginController@login');
 Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::get('/profil', 'PageController@profil');
