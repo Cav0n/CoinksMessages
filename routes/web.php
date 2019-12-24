@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'PageController@homepage');
+Route::get('/inscription', 'PageController@registration');

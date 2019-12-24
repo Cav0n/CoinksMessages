@@ -9,4 +9,8 @@ class PageController extends Controller
     public function homepage(){
         return view('pages.homepage');
     }
+
+    public function registration(){
+        return view('pages.auth.registration');
+    }
 }
