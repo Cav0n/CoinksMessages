@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -21,5 +22,9 @@ class PageController extends Controller
     public function profil(){
         $messages = \App\Message::all()->sortByDesc('created_at');
         return view('pages.profil.home')->withMessages($messages);
+    }
+
+    public function testmail(){
+        Mail::to("cav0n@hotmail.fr")->send(new \App\Mail\testing);
     }
 }

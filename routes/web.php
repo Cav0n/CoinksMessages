@@ -21,3 +21,4 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/profil', 'PageController@profil');
 
 Route::post('/messages/nouveau', 'MessageController@store');
+Route::get('/mot-de-passe-oublie', 'PageController@testmail');
