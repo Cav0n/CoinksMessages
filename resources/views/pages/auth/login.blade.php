@@ -19,7 +19,7 @@
 <body class='container-fluid'>
     <main class='row justify-content-center'>
         <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-right" style="height:100vh">
-            
+
             <form action="/connexion" method="post">
                 @csrf
 
@@ -58,7 +58,11 @@
 
                 </div>
 
-                <button type="submit" class="btn btn-primary">Connexion</button>
+                <div class='ml-auto col-lg-8 d-flex justify-content-between p-0 pl-2'>
+                    <a class='text-muted mr-auto' href="/">Retour</a>
+                    <button type="submit" class="btn btn-primary">Connexion</button>
+                </div>
+                
             </form>
 
         </div>

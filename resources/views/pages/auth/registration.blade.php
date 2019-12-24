@@ -75,7 +75,10 @@
 
                 </div>
 
-                <button type="submit" class="btn btn-primary">S'inscrire</button>
+                <div class='ml-auto col-lg-8 d-flex justify-content-between p-0 pl-2'>
+                    <a class='text-muted mr-auto' href="/">Retour</a>
+                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                </div>
             </form>
 
         </div>
