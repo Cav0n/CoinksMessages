@@ -22,38 +22,38 @@
             <form action="/inscription" method="post">
                 @csrf
 
-                <div class="form-group row">
+                <div class="form-group row @error('pseudo') is-invalid @enderror">
 
                     <div class="col-lg-4 text-right p-0 d-flex flex-column justify-content-center">
                         <label for="pseudo" class="mr-3">Pseudo</label>
                     </div>
 
                     <div class="col-lg-8">
-                        <input type="text" class="form-control" name="pseudo" id="pseudo"> 
+                        <input type="text" class="form-control" name="pseudo" id="pseudo" value='{{old('pseudo')}}'> 
                     </div>
 
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row @error('email') is-invalid @enderror">
 
                     <div class="col-lg-4 text-right p-0 d-flex flex-column justify-content-center">
                         <label for="email" class="mr-3">Email</label>
                     </div>
 
                     <div class="col-lg-8">
-                        <input type="text" class="form-control" name="email" id="email" aria-describedby="helpEmail" placeholder="">
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby="helpEmail" value='{{old('email')}}'>
                     </div>
 
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row @error('password') is-invalid @enderror">
 
                     <div class="col-lg-4 text-right p-0 d-flex flex-column justify-content-center">
                         <label for="password" class="mr-3">Mot de passe</label>
                     </div>
 
                     <div class="col-lg-8">
-                        <input type="text" class="form-control" name="password" id="password" aria-describedby="helpPassword">
+                        <input type="password" class="form-control" name="password" id="password" aria-describedby="helpPassword">
                     </div>
 
                 </div>

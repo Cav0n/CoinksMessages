@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    protected $primaryKey = 'id'; // or null
+    protected $primaryKey = 'pseudo'; // or null
 
     public $incrementing = false;
 

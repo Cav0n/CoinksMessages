@@ -13,3 +13,4 @@
 
 Route::get('/', 'PageController@homepage');
 Route::get('/inscription', 'PageController@registration');
+Route::post('/inscription', 'Auth\RegisterController@create');
